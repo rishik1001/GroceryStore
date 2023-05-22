@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>one8 Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
+</head>
+
+<body>
+    <div style="background-color: black;" id="blur">
+        <nav class = navbar>
+            <ul class="menu">
+                <li><a href="#1" style = "color: white"><i class="fa fa-heart" style="font-size:35px" aria-hidden="true"></i></a></li>
+                <li><a href="#2" style = "color: white"><i class="fa fa-list" style="font-size:35px" aria-hidden="true"></i></a></li>
+                <li><a href="#" style = "color: white" onclick="toggle()"><i class="fa fa-user" style="font-size:35px"
+                    aria-hidden="true"></i></a></li>
+                <li>
+                    <a href="#4" style = "color: white" ><i class="fa fa-map-marker" style="font-size:35px"
+                        aria-hidden="true"></i></a>
+                    <ul class="sub-menu">
+                        <li><a href = "#" onclick = "abc">Hyderabad</a></li>
+                        <li>Chennai</li>
+                        <li>Mumbai</li>
+                        <li>Delhi</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class=" slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="indvspak.jpg">
+                </div>
+                <div class="slide">
+                    <img src="music.png">
+                </div>
+                <div class="slide">
+                    <img src="dance.jpg">
+                </div>
+                <div class="slide">
+                    <img src="indvspak.jpg">
+                </div>
+                <div class="slide">
+                    <img src="music.png">
+                </div>
+                <div class="slide">
+                    <img src="dance.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="blank">
+
+        </div>
+        <div class="blank">
+
+        </div>
+        <div class="events-container">
+            <div class="part1"><i class="fa fa-hand-o-right" style="font-size: 40px;" aria-hidden="true"></i></div>
+            <div class="part4">
+                <div style="font-size: 1.5rem;" style="color: white"><b>TODAY'S EVENTS</b></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="main-carousel" style = "background-color: black;">
+            <a href="#he1">
+                <div class="events" style="margin-left:150px">
+                    <div class="event-part">
+                        <img src="s1.jpg" alt="Avatar" class="image" style="width:100%">
+                        <div class="middle">
+                            <div class="text">Buy</div>
+                        </div>
+                    </div>
+                    <div class="desc" style="color: grey"><span><b style="font-size: 1.3rem;">India V/S Pakistan
+                                Live
+                                Screening</b></span><br>
+                        October 23rd | 1:30 P.M <br> Hyderabad
+                    </div>
+                </div>
+            </a>
+            <a href="#me1">
+                <div class="events">
+                    <div class="event-part">
+                        <img src="m1.jpg" alt="Avatar" class="image" style="width:100%">
+                        <div class="middle">
+                            <div class="text">Buy</div>
+                        </div>
+                    </div>
+                    <div class="desc" style="color: grey"><span><b style="font-size: 1.3rem;"><br>Arijit Singh Live
+                                Concert</b></span><br>
+                        October 23rd | 7:30 P.M <br>
+                        Mumbai
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="popup">
+        <label for="show" class="close-btn fas fa-times" title="close"></label>
+        <div class="signin">
+            Sign In or Sign Up
+        </div>
+        <form action="#">
+            <div class="data">
+                <label>Email or Phone</label>
+                <input type="text" required>
+            </div>
+            <div class="data">
+                <label>Password</label>
+                <input type="password" required>
+            </div>
+            <div class="btn">
+                <div class="inner"></div>
+                <button type="submit">login</button>
+            </div>
+        </form>
+        <div style="text-align: center;">
+            <a href="#" style="text-align: center" onclick="toggle()">Close</a>
+        </div>
+    </div>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script type="text/javascript">
+        $('.main-carousel').flickity({
+            // options
+            cellAlign: 'left',
+            wrapAround: false,
+            freeScroll: false
+        });
+        function toggle() {
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup = document.getElementById('popup');
+            popup.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

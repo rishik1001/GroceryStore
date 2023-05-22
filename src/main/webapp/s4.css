@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.parent {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(back.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.sidebar-check {
+    position: fixed;
+    width: 240px;
+    left: -240px;
+    height: 100%;
+    transition: all .5s ease;
+}
+
+.sidebar-check header {
+    font-size: 26px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar-check a {
+    display: block;
+    height: 65px;
+    width: 100%;
+    color: white;
+    line-height: 65px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-left: 5px solid transparent;
+    font-family: 'Open Sans', sans-serif;
+    transition: all .5s ease;
+}
+
+.sidebar-check a.active{
+	border-left: 5px solid white;
+    color: white;
+}
+.sidebar-check a:hover {
+    border-left: 5px solid white;
+    color: white;
+}
+
+.sidebar-check a i {
+    font-size: 23px;
+    margin-right: 16px;
+}
+
+.sidebar-check a span {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#check-side {
+    display: none;
+}
+
+label #btn,
+label #cancel {
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #262626;
+    margin: 15px 30px;
+    font-size: 29px;
+    background: #262626;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    transition: all .5s ease;
+}
+
+label #cancel {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#check-side:checked~.sidebar-check {
+    left: 0;
+}
+
+#check-side:checked~label #btn {
+    margin-left: 245px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#check-side:checked~label #cancel {
+    margin-left: 245px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.bar {
+    display: flex;
+    height: 80px;
+}
+
+.search {
+    padding-left: 200px;
+    padding-top: 25px;
+}
+
+@media(max-width : 860px) {
+    .sidebar-check {
+        height: auto;
+        width: 70px;
+        left: 0;
+        margin: 100px 0;
+    }
+
+    header,
+    #btn,
+    #cancel {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        margin-left: 23px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar-check a {
+        height: 60px;
+    }
+
+    .sidebar-check a i {
+        margin-left: -10px;
+    }
+
+    a:hover {
+        width: 200px;
+        background: inherit;
+    }
+
+    .sidebar-check a:hover span {
+        opacity: 1;
+        visibility: hidden;
+    }
+}
+.search {
+    align-items: center;
+    padding-left: 400px;
+    padding-top: 10px;
+    width: 1000px;
+    display: inline-block;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 700px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+}
+
+::placeholder {
+    color: #cac7ff;
+}
+
+/*.search-bar button img{
+        width: 25px;
+    }*/
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.cart {
+    padding-top: 70px;
+    color: white;
+    font-size: 2rem;
+    border: 10px solid violet;
+    padding-left: 1px;
+    width: 130px;
+}
+.myDiv {
+
+            text-align: center;
+            height: 105px;
+            width: 700px;
+            opacity: .5;
+            border-radius: 100px;
+            border-bottom: 1px solid grey;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease-in-out;
+
+        }
+
+        .myDiv .image {
+            display: inline;
+        }
+
+        .myDiv .image img {
+            width: 120px;
+            height: 105px;
+            float: left;
+        }
+
+        .myDiv .div-desc {
+            color: white;
+            text-align: center;
+            padding-top: 30px;
+            float: left;
+            padding-left: 50px;
+        }
+
+        hr {
+            width: 50%;
+        }
+
+        .myDiv:hover {
+            box-shadow: 1px black;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+        }
